@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0; padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    /* border: 1px solid; */
+}
+body{
+    /* background:url('../img/ex0.jpg'); */
+    border: 1px solid;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+main{
+    width: 620px;
+}
+
+
+
+/* 인사 */
+#greeting{
+    display: flex;
+    /* align-items:flex-end; */
+}
+#greeting figure{
+    /* background-image: url("../img/barista.png"); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-color: lightblue; */
+    /* width: 170px;
+    height: 185px; */
+    height: 100%;
+    text-align: bottom;
+}
+#greeing figure img{
+    text-align: bottom;
+    height:100%;
+}
+#greeting>div{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+#greeting>div>div{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    /* display:none; */
+}
+.tail1{
+    width:0px;
+    height:0px;
+    border-bottom: 15px solid transparent;
+    border-right: 20px solid whitesmoke;
+}
+.tail2{
+    width:0px;
+    height:0px;
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid whitesmoke;
+}
+.talk{
+    width: 90%;
+    height: 80%;
+    background: whitesmoke;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+.talk input{
+    margin-left: 0.5em;
+    background-color: whitesmoke;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    width:40%;
+    text-align: center;
+    font-size: 1.2em;
+}
+.talk input:focus{
+    outline: none;
+}
+
+/* 본문 */
+article{
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+}
+article>div{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#todolist, #todaycoffee{
+    height: 63%;
+}
+#weather, #clock{
+    height: 34%;
+}
+
+/* todo */
+#todolist{
+    background-color: #dcdcdc;
+    display: flex;
+    flex-direction: column;
+}
+#todo-form{
+    text-align: center;
+    width: 80%;
+    margin:0.8em auto;
+}
+#todo-form input{
+    width: 100%;
+    background: #dcdcdc;
+    border: none;
+    font-size: 1.2em;
+    border-bottom: 2px solid;
+    padding: 0.3em;
+}
+#todo-form input:focus{
+    outline: none;
+    background-color:lightgray;
+}
+#todo-list{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.3em;
+    line-height: 1.5em;
+}
+#todo-list span{
+    margin-right:0.5em;
+}
+
+/* coffee */
+#todaycoffee{
+    background-color: #a6937c;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#todaycoffee figure{
+    width:100px;
+    height:40%;
+    /* background-color:lightgray;
+    background-image:url("../img/latte.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%; */
+    /* background:lightgray url("../img/latte.png") no-repeat center / 60%; */
+    margin:1em auto;
+    border-radius: 5em;
+}
+#todaycoffee div{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* weather */
+#weather{
+    background-color: #b28850;
+    position: relative;
+}
+#weather>div{
+    position: absolute;
+    left: 0.5em;
+    bottom: 0.5em;
+    color: whitesmoke;
+    line-height: 1.6em;
+}
+#weather>div span:first-child{
+    font-size: 1.2em;
+}
+#weather>div span:last-child{
+    font-size: 2em;
+    font-weight: bold;
+}
+/* clock */
+#clock{
+    background-color: #6a3906;
+    position: relative;
+    color: whitesmoke;
+    text-align: center;
+}
+#clock>div{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width:40%;
+    position: absolute;
+    justify-content: flex-end;
+    bottom: 15px;
+    right: 15px;
+}
+#clock>div>p:first-child{
+    font-size: 4em;
+    line-height: 0.8em;
+}
+#clock>div>p:nth-child(2){
+    font-size: 1.5em;
+    line-height: 1em;
+}
+#clock>div>p:last-child{
+    font-size: 1.5em;
+    line-height: 0.9em;
+}
+
+.hidden{
+    display: none !important;
+}

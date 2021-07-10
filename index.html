@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <!-- 인사 -->
+        <div id="greeting">
+            <figure><!-- 캐릭터 -->
+                <img src="../img/barista.png">
+            </figure>
+            <div >
+                <div>
+                    <div class="tail1"></div>
+                    <div class="talk">
+                        <div>
+                            Hi, I'm a barista, Yong.<br>
+                            What's your name?
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="talk">My name is
+                        <input 
+                        type="text"
+                        required
+                        placeholder="Write your name" 
+                        maxlength="15"></input>.
+                    </form>
+                    <div class="tail2"></div>
+                </div>
+            </div>
+            <div class="answer hidden">
+                <div>
+                    <div class="tail1"></div>
+                    <div class="talk talk2"></div>
+                </div>
+                <div class="hidden">
+                    <div class="talk talk2"></div>
+                    <div class="tail2"></div>
+                </div>
+            </div>
+        </div>
+        <article>
+            <div>
+                <!-- 투두리스트 -->
+                <div id="todolist">
+                    <form id="todo-form">
+                        <input 
+                        type="text"
+                        required
+                        placeholder="Write a To Do"
+                        >
+                    </form>
+                    <ul id="todo-list">
+                    </ul>
+                </div>
+                <!-- 날씨 -->
+                <div id="weather">
+                    <div>
+                        <span></span><br>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- 시계 -->
+                <div id="clock">
+                    <div>
+                        <p>00</p>
+                        <p>일<br>Jan</p>
+                        <p>00 : 00 AM</p>
+                    </div>
+                </div>
+                <!-- 오늘의커피 -->
+                <div id="todaycoffee">
+                    <h3>The barista's pick</h3>
+                    <figure></figure>
+                    Would you like some
+                    <div>coffeename</div>today?
+                </div>
+            </div>
+        </article>
+    </main>
+    
+    <script src="js/random.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
+</body>
+</html>
