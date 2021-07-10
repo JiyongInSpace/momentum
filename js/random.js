@@ -1,7 +1,7 @@
 const bgImg = ["ex0.jpg", "ex1.jpg", "ex2.jpg"];
 const randomBgImg = bgImg[Math.floor(Math.random() * bgImg.length)];
 const bodyStyle = document.body.style;
-bodyStyle.background = `url('../img/${randomBgImg}') no-repeat`;
+bodyStyle.background = `url('img/${randomBgImg}') no-repeat`;
 bodyStyle.backgroundSize = 'cover';
 
 const cafeMenu = [
@@ -14,5 +14,5 @@ const todayCoffee = cafeMenu[Math.floor(Math.random() * cafeMenu.length)];
 const coffeeFigure = document.querySelector("#todaycoffee figure");
 const coffeeName = document.querySelector("#todaycoffee div");
 
-coffeeFigure.style = `background : lightgray url("../img/${todayCoffee.photo}") no-repeat center / 50%;`;
+coffeeFigure.style = `background : lightgray url("img/${todayCoffee.photo}") no-repeat center / 50%;`;
 coffeeName.innerText = `${todayCoffee.menu},`;
