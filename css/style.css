@@ -81,6 +81,7 @@ main{
     justify-content: center;
     align-items: center;
     /* text-align: center; */
+    
 }
 .talk input{
     margin-left: 0.5em;
@@ -90,9 +91,14 @@ main{
     width:60%;
     text-align: center;
     font-size: 1em;
+    transition: 0.7s;
 }
 .talk input:focus{
     outline: none;
+}
+.colorfocus2{
+    background-color: lightgray !important;
+    
 }
 
 /* 본문 */
@@ -113,7 +119,7 @@ article>div{
 #weather, #clock{
     height: 34%;
 }
-#weather:hover, #clock:hover, #todaycoffee:hover{
+#weather:hover, #clock:hover, #todaycoffee:hover, #todolist:hover{
     /* cursor: pointer; */
     filter: brightness(0.9);
 }
@@ -150,6 +156,9 @@ article>div{
     margin-right:0.5em;
 }
 
+#todo-list li span:nth-child(2), #todo-list li span:last-child{
+    cursor: pointer;
+}
 /* coffee */
 #todaycoffee{
     background-color: #a6937c;

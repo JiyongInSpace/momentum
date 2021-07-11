@@ -6,6 +6,8 @@ const answer = document.querySelector("#greeting .answer");
 const answerContent = document.querySelector(".talk2");
 const HIDDEN_CLASSNAME = "hidden";
 
+const colorfocus = document.querySelector(".colorfocus")
+const COLORFOCUS2 = "colorfocus2";
 
 function submitName(event){
     event.preventDefault();
@@ -28,3 +30,10 @@ if(savedUsername == null){
     firstTalk.classList.add(HIDDEN_CLASSNAME);
     baristaAnswer(savedUsername);
 }
+
+
+function changeColor(){
+    colorfocus.classList.toggle(COLORFOCUS2);
+}
+
+setInterval(changeColor, 1000);
