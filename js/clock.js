@@ -31,11 +31,11 @@ function timeNow(){
 
 function talkAboutTime(){
     if(hoursCopy >= 5 && hoursCopy <= 11){
-        answerContent.innerText = `Good morning, ${savedUsername}!`;
+        answerContent.innerText = `Good morning!`;
     } else if(hoursCopy >= 12 && hoursCopy <= 17){
-        answerContent.innerText = `Good afternoon, ${savedUsername}!`
+        answerContent.innerText = `Good afternoon!`
     } else {
-        answerContent.innerText = `Good evening, ${savedUsername}!`
+        answerContent.innerText = `Good evening!`
     }
 }
 
