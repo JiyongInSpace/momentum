@@ -28,9 +28,9 @@ let pcJs = window.matchMedia('(min-width: 421px)')
     }
     function touchEnd(event){
         endX = event.changedTouches[0].pageX;
-        if(startX > endX){
+        if(startX - endX > 50){
             prev();
-        } else if(startX < endX){
+        } else if(startX - endX < -50){
             next();
         }
     }
