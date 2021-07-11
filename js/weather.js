@@ -2,6 +2,7 @@ const API_KEY = "cce5bf7eb759500e3a448e8b59a7d21e";
 const weather = document.querySelector("#weather div span:first-child");
 const city = document.querySelector("#weather div span:last-child");
 const weatherBox = document.querySelector("#weather");
+let weatherCopy;
 
 function onGeoOK(position){
     const lat = position.coords.latitude;
@@ -13,6 +14,7 @@ function onGeoOK(position){
         // const weather = document.querySelector("#weather span:first-child")
         // const city = document.querySelector("#weather span:last-child")
         weather.innerText = `${data.weather[0].main}, ${Math.round(data.main.temp)}°`;
+        weatherCopy = data.weather[0].main;
         city.innerText = `@${data.name}`;
         
     });
@@ -26,10 +28,9 @@ function talkAboutWeather(){
     if(weather.innerText == 'no answer'){
         answerContent.innerText = `I don't know where you are.`;
     } else if(weather.innerText !== 'no answer') {
-        answerContent.innerHTML = `Look out the window.<br>I like the ${city.innerText}`;
+        answerContent.innerHTML = `Look out the window.<br>I like the ${weatherCopy}`;
     }
 }
-
 weatherBox.addEventListener("click", talkAboutWeather)
 
 
