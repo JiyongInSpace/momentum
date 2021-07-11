@@ -12,17 +12,18 @@ function onGeoOK(position){
     .then(data => {
         // const weather = document.querySelector("#weather span:first-child")
         // const city = document.querySelector("#weather span:last-child")
-        city.innerText = `@${data.name}`;
         weather.innerText = `${data.weather[0].main}, ${Math.round(data.main.temp)}°`;
+        city.innerText = `@${data.name}`;
+        
     });
 }
 function onGeoError(){
-    // weather.innerText = 'no answer';
+    weather.innerText = 'no answer';
 }
 navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
 
 function talkAboutWeather(){
-    if(weather.innerText = ''){
+    if(weather.innerText == 'no answer'){
         answerContent.innerText = `I don't know where you are.`;
     } else {
         answerContent.innerHTML = `Look out the window.<br>I like the ${data.weather[0].main}`;
