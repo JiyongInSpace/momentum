@@ -1,7 +1,6 @@
 const todoForm = document.querySelector("#todo-form");
 const todoUl = document.querySelector("#todo-list");
 const todoInput = document.querySelector("#todo-form input");
-
 let todos = [];
 
 
@@ -12,7 +11,11 @@ function delTodo(event){
     saveTodo();
     li.remove();
     if(span == "✔️"){
-        answerContent.innerText = `You did it, ${localStorage.getItem("username")}!`;
+        if(todos.length == 0){
+            answerContent.innerText = `You did it, ${localStorage.getItem("username")}!`;
+        } else{
+            answerContent.innerText = `Just keep trying, ${localStorage.getItem("username")}!`;
+        }
     }
     
 }
@@ -41,7 +44,7 @@ function paintTodo(todo){
 function submitTodo(event){
     event.preventDefault();
     const todo = todoInput.value;
-    answerContent.innerText = `You just have to do your best, ${localStorage.getItem("username")}!`
+    answerContent.innerText = `Let's try our best, ${localStorage.getItem("username")}!`
 
     const todoObj = {
         text: todo,
@@ -54,7 +57,13 @@ function submitTodo(event){
     // localStorage.setItem("todos", JSON.stringify(todos))
 }
 
+function talkAboutTodo(){
+    answerContent.innerText = `Write a to do and press enter.`;
+}
+
+
 const savedTodos = localStorage.getItem("todos");
+
 if(savedTodos !== null){
     todos = JSON.parse(savedTodos);
     todos.forEach(paintTodo);
@@ -62,5 +71,5 @@ if(savedTodos !== null){
     answerContent.innerHTML += `<br>You have things to do, right?`;}
 }
 
-
+todoInput.addEventListener("click", talkAboutTodo)
 todoForm.addEventListener("submit", submitTodo)

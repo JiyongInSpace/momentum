@@ -111,7 +111,10 @@ article>div{
 #weather, #clock{
     height: 34%;
 }
-
+#weather:hover, #clock:hover, #todaycoffee:hover{
+    /* cursor: pointer; */
+    filter: brightness(0.9);
+}
 /* todo */
 #todolist{
     background-color: #dcdcdc;
@@ -227,8 +230,17 @@ article>div{
     article{
         padding:0.5em;
     }
+    article>div{
+        transform: translateX(0);
+    }
 }
 @media(max-width: 420px){
+    #greeting figure {
+        width: 60%;
+    }
+    #greeting figure img{
+        width:100%;
+    }
     article{
         /* flex-direction: column; */
         width: 100%;
