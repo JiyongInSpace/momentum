@@ -17,12 +17,12 @@ function onGeoOK(position){
     });
 }
 function onGeoError(){
-    weather.innerText = 'no answer';
+    // weather.innerText = 'no answer';
 }
 navigator.geolocation.getCurrentPosition(onGeoOK, onGeoError);
 
 function talkAboutWeather(){
-    if(weather.innerText = 'no answer'){
+    if(weather.innerText = ''){
         answerContent.innerText = `I don't know where you are.`;
     } else {
         answerContent.innerHTML = `Look out the window.<br>I like the ${data.weather[0].main}`;
