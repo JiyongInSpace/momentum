@@ -6,7 +6,7 @@ const answer = document.querySelector("#greeting .answer");
 const answerContent = document.querySelector(".talk2");
 const HIDDEN_CLASSNAME = "hidden";
 
-const colorfocus = document.querySelector(".colorfocus")
+const colorfocus = document.querySelector(".talk input")
 const COLORFOCUS2 = "colorfocus2";
 
 function submitName(event){
