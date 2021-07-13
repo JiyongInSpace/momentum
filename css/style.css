@@ -121,7 +121,7 @@ article>div{
 }
 #weather:hover, #clock:hover, #todaycoffee:hover, #todolist:hover{
     /* cursor: pointer; */
-    filter: brightness(0.9);
+    filter: brightness(0.95);
 }
 /* todo */
 #todolist{
@@ -151,13 +151,30 @@ article>div{
     margin: 0 auto;
     padding: 0.3em;
     line-height: 1.5em;
+    overflow-y: auto;
+}
+#todo-list::-webkit-scrollbar{
+    width:5px;
+}
+#todo-list::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+#todo-list::-webkit-scrollbar-track{
+    background-color: silver;
 }
 #todo-list span{
-    margin-right:0.5em;
-}
-
-#todo-list li span:nth-child(2), #todo-list li span:last-child{
+    margin-left:0.5em;
     cursor: pointer;
+}
+#todo-list span:hover{
+    transform: scale(1.2);
+}
+#todo-list li{
+    display:flex;
+    justify-content: space-between;
+}
+#todo-list li span:first-child{
+    margin-left: auto;
 }
 /* coffee */
 #todaycoffee{

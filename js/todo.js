@@ -25,20 +25,19 @@ function saveTodo(){
 function paintTodo(todo){
     const li = document.createElement("li");
     li.id = todo.id;
+    li.innerText = todo.text;
     const span = document.createElement("span");
-    span.innerText = todo.text;
+    span.innerText = '✔️';
     const secondSpan = document.createElement("span");
-    secondSpan.innerText = '✔️';
-    const thirdSpan = document.createElement("span");
-    thirdSpan.innerText = '❌';
-    
+    secondSpan.innerText = '❌';
+    span.addEventListener("click", delTodo)
     secondSpan.addEventListener("click", delTodo)
-    thirdSpan.addEventListener("click", delTodo)
 
     li.appendChild(span);
     li.appendChild(secondSpan);
-    li.appendChild(thirdSpan);
     todoUl.appendChild(li);
+
+    li.scrollIntoView({block:"center"});
 }
 
 function submitTodo(event){
